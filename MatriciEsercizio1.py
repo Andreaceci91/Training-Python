@@ -49,7 +49,7 @@ for item in mat:
     sum_row.append(sum(item))
 
 
-print(len(sum_row))
+# print(len(sum_row))
 
 i = 0
 max = sum_row[0]
@@ -60,6 +60,31 @@ while i < len(sum_row):
         max = sum_row[i]
     i += 1
         
-print('La riga con somma massima è la', row_count+1,'con valore',max)
+print('\nLa riga con somma massima è la', row_count+1,'con valore',max)
 
+print(" ")
+
+if len(mat) > 1:
+    max_col = mat[0][0] + mat[1][0]
+
+# print(max_col,"\n")
+
+app = 0
+i = 0
+j = 0
+while i < len(mat):
     
+    while j < len(mat):
+        app = app + mat[j][i]
+        j += 1
+
+    # print("App:", app)
+    if app > max_col:
+        col_count = j
+        max_col = app  
+
+    app = 0
+    j = 0
+    i += 1
+
+print("La colonna con somma massima e la",col_count,"con valore", max_col)
