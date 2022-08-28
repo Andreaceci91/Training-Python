@@ -39,3 +39,27 @@ for item in mat:
 
 print("La somma di tutti gli elementi e':", sum_tot)
 print(" ")
+
+sum_row  = []
+
+for item in mat:
+    print(item)
+
+for item in mat:
+    sum_row.append(sum(item))
+
+
+print(len(sum_row))
+
+i = 0
+max = sum_row[0]
+
+while i < len(sum_row):
+    if sum_row[i] > max:
+        row_count = i
+        max = sum_row[i]
+    i += 1
+        
+print('La riga con somma massima è la', row_count+1,'con valore',max)
+
+    
