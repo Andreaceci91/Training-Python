@@ -88,3 +88,5 @@ while i < len(mat):
     i += 1
 
 print("La colonna con somma massima e la",col_count,"con valore", max_col)
+
+print("Ciao")
